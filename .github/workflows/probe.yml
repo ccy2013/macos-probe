@@ -1,0 +1,8 @@
+name: macos probe
+on:
+  workflow_dispatch:
+jobs:
+  m:
+    runs-on: macos-26
+    steps:
+      - run: echo "macos runner allocated"; sw_vers
