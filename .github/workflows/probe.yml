@@ -1,8 +1,16 @@
-name: macos probe
+name: macos matrix probe
 on:
   workflow_dispatch:
 jobs:
-  m:
+  m15:
+    runs-on: macos-15
+    steps:
+      - run: echo "macos-15 OK"; sw_vers; xcodebuild -version
+  mlatest:
+    runs-on: macos-latest
+    steps:
+      - run: echo "macos-latest OK"; sw_vers; xcodebuild -version
+  m26:
     runs-on: macos-26
     steps:
-      - run: echo "macos runner allocated"; sw_vers
+      - run: echo "macos-26 OK"; sw_vers; xcodebuild -version
