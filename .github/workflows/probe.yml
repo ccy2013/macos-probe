@@ -1,16 +1,12 @@
-name: macos matrix probe
+name: runner class probe
 on:
   workflow_dispatch:
 jobs:
-  m15:
-    runs-on: macos-15
+  w:
+    runs-on: windows-latest
     steps:
-      - run: echo "macos-15 OK"; sw_vers; xcodebuild -version
-  mlatest:
-    runs-on: macos-latest
+      - run: echo "windows OK"
+  u:
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "macos-latest OK"; sw_vers; xcodebuild -version
-  m26:
-    runs-on: macos-26
-    steps:
-      - run: echo "macos-26 OK"; sw_vers; xcodebuild -version
+      - run: echo "ubuntu OK"
